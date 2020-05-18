@@ -40,7 +40,17 @@ extension UIImageView {
 
 
 extension UIViewController{
-    func addSaerch(search : UISearchController){
+    func addSaerchNow(search : UISearchController){
+        search.searchBar.placeholder = "Search"
+        search.searchBar.backgroundColor = UIColor.clear
+        search.obscuresBackgroundDuringPresentation = false
+
+        search.hidesNavigationBarDuringPresentation = false
+        self.navigationItem.searchController = search
+    }
+}
+extension TopRatedViewController{
+    func addSaerchTop(search : UISearchController){
         search.searchBar.placeholder = "Search"
         search.searchBar.backgroundColor = UIColor.clear
         search.obscuresBackgroundDuringPresentation = false

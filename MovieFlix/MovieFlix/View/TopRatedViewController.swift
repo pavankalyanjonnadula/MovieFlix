@@ -26,12 +26,10 @@ class TopRatedViewController: UIViewController, UISearchControllerDelegate, UISe
         super.viewDidLoad()
         topRatedMoviesCollectionView.register(UINib.init(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "moviescell")
         getMovies()
-    }
-    override func viewWillAppear(_ animated: Bool) {
+        addSaerchNow(search: search)
+        search.searchResultsUpdater = self
         topRatedMoviesCollectionView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
-        addSaerch(search: search)
-        search.searchResultsUpdater = self
     }
     @objc private func refreshData(_ sender: Any) {
         getMovies()

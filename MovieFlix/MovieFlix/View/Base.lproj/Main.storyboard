@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Top Rated View Controller-->
+        <!--Top Rated Movies-->
         <scene sceneID="chL-kC-ZL0">
             <objects>
                 <viewController storyboardIdentifier="TopRatedViewController" id="7ZB-RM-SBa" customClass="TopRatedViewController" customModule="Movie_Flix" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fnP-38-fnX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dMb-fK-Ema"/>
+                    <navigationItem key="navigationItem" title="Top Rated Movies" id="dMb-fK-Ema"/>
                     <connections>
                         <outlet property="topRatedMoviesCollectionView" destination="kfd-g0-ewh" id="lPd-W2-M3d"/>
                         <outlet property="topRatedNavigationItem" destination="dMb-fK-Ema" id="7be-vx-Zyg"/>
@@ -56,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="2494.202898550725" y="106.79347826086958"/>
         </scene>
-        <!--Now Playing View Controller-->
+        <!--Now Playing Movies-->
         <scene sceneID="AGU-nL-BRH">
             <objects>
                 <viewController storyboardIdentifier="NowPlayingViewController" id="BBA-Jd-q1g" customClass="NowPlayingViewController" customModule="Movie_Flix" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +85,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zkK-p6-RWw"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nIz-6y-UkC"/>
+                    <navigationItem key="navigationItem" title="Now Playing Movies" id="nIz-6y-UkC"/>
                     <connections>
                         <outlet property="nowPlayingMoviesCollectionView" destination="WdV-rs-8gi" id="And-1q-u8y"/>
                     </connections>

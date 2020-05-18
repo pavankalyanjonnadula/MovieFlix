@@ -24,11 +24,10 @@ class NowPlayingViewController: UIViewController {
         super.viewDidLoad()
         nowPlayingMoviesCollectionView.register(UINib.init(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "moviescell")
         getMovies()
+        
         nowPlayingMoviesCollectionView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        addSaerch(search: search)
+        addSaerchNow(search: search)
         search.searchResultsUpdater = self
     }
     @objc private func refreshData(_ sender: Any) {
